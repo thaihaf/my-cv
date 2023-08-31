@@ -13,7 +13,7 @@ export default function PersonalInfo() {
         Email:{" "}
         <span className="text-blue-500 underline">{PERSONAL_INFO.email}</span>
       </div>
-      <div className="link">
+      <div className="link mb-12">
         LinkedIn:{" "}
         <a href={PERSONAL_INFO.link} className="text-blue-500 underline">
           {PERSONAL_INFO.link}
