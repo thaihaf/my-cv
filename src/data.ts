@@ -15,7 +15,7 @@ export const SUMMARY = [
 export const TECHNICAL_SKILLS = {
   PROGRAMMING_LANGUAGES: {
     title: "Programming Languages",
-    data: ["C#.NET", "Java", "JavaScript", "HTML5", "CSS3"],
+    data: ["C#.NET, Java, JavaScript", "HTML5, CSS3"],
   },
   VERSION_CONTROL: {
     title: "Version Control",
@@ -33,7 +33,13 @@ export const TECHNICAL_SKILLS = {
   },
   FOREIGN_LANGUAGES: {
     title: "Foreign Languages",
-    data: [{ title: "English", details: ["TOEIC: 940/990", "IELTS: 7.5"] }],
+    data: [
+      {
+        id: "englist",
+        title: "English",
+        details: ["TOEIC: 670/990", "IELTS: 6.5"],
+      },
+    ],
   },
   DATABASE_MANAGEMENT_SYSTEMS: {
     title: "Database Management Systems",
@@ -57,7 +63,8 @@ export const EDUCATION = {
   title: "Education",
   data: [
     {
-      name: "FPT University Ha Noi (Vietname)",
+      id: "fpt",
+      name: "FPT University Ha Noi (Vietnam)",
       fromDate: "09/2016",
       toDate: "12/2022",
       details: [
@@ -66,7 +73,8 @@ export const EDUCATION = {
       ],
     },
     {
-      name: "FPT University Ha Noi (Vietname)",
+      id: "langcaster",
+      name: "FPT University Ha Noi (Vietnam)",
       fromDate: "09/2016",
       toDate: "12/2022",
       details: [
@@ -81,49 +89,38 @@ export const PROFESSIONAL_EXPERIENCE = {
   title: "Professional Experience",
   data: [
     {
+      id: "monstarlab",
       name: "Monstarlab",
       fromDate: "02/2015",
       toDate: "now",
       position: "Fullstack",
-      projects: [
-        {
-          name: "FPT University",
-          desc: "A free mobie app delivering Lancaster",
-          size: 10,
-          responsibility: ["Design", "Development"],
-        },
-        {
-          name: "FPT University",
-          desc: "A free mobie app delivering Lancaster",
-          size: 10,
-          responsibility: ["Design", "Development"],
-        },
-      ],
+      project: {
+        name: "FPT University",
+        desc: "A free mobie app delivering Lancaster",
+        size: 10,
+        responsibility: ["Design", "Development"],
+      },
     },
     {
+      id: "fpt",
       name: "FPT University",
       fromDate: "02/2015",
       toDate: "now",
       position: "Fullstack",
-      projects: [
-        {
-          name: "FPT University",
-          desc: "A free mobie app delivering Lancaster",
-          size: 10,
-          responsibility: ["Design", "Development"],
-        },
-        {
-          name: "FPT University",
-          desc: "A free mobie app delivering Lancaster",
-          size: 10,
-          responsibility: ["Design", "Development"],
-        },
-      ],
+      project: {
+        name: "FPT University",
+        desc: "A free mobie app delivering Lancaster",
+        size: 10,
+        responsibility: ["Design", "Development"],
+      },
     },
   ],
 };
 
-export const PASTIMES_AND_ACTIVITIES = [
-  "I am keen on reading books, IT blogs, Medium and Quora in my free time",
-  "In my free time, I also work in some pet projects. They can found at my online CV and my Github profile",
-];
+export const PASTIMES_AND_ACTIVITIES = {
+  title: "pastimes and activities",
+  data: [
+    "I am keen on reading books, IT blogs, Medium and Quora in my free time",
+    "In my free time, I also work in some pet projects. They can found at my online CV and my Github profile",
+  ],
+};
