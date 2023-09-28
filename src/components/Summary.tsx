@@ -1,14 +1,33 @@
-import Title from "./Title";
+import Title from "../atoms/Title";
 import { SUMMARY } from "../data";
+import { StyleSheet, Text } from "@react-pdf/renderer";
 
-export default function Summary() {
-  return (
-    <>
-      <Title title={"summary"} />
+interface SummaryProps {
+	isPDF?: boolean;
+}
 
-      {SUMMARY.map((item) => (
-        <p className="indent-14">{item}</p>
-      ))}
-    </>
-  );
+const styles = StyleSheet.create({
+     line: { textIndent: "56px" },
+});
+export default function Summary({ isPDF }: SummaryProps) {
+     if (isPDF) {
+          return (
+               <>
+                    <Title title={"summary"} isPDF={true} />
+
+                    {SUMMARY.map((item) => (
+                         <Text style={styles.line}>{item}</Text>
+                    ))}
+               </>
+          );
+     }
+     return (
+          <>
+               <Title title={"summary"} />
+
+               {SUMMARY.map((item) => (
+                    <p className="indent-14">{item}</p>
+               ))}
+          </>
+     );
 }

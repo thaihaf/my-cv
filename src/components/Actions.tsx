@@ -1,28 +1,24 @@
-import React, { useState } from "react";
-
-interface Props {
-  a: number;
-  b?: () => void;
-}
-const Actions = ({ a }: Props) => {
-  const [items, setItems] = useState(["Item 1", "Item 2", "Item 3"]);
-
-  const addItem = () => {
-    const newItem = `New Item ${items.length + 1}`;
-    setItems([...items.slice(0, 1), newItem, ...items.slice(1)]);
-  };
-  console.log(a);
-  return (
-    <div className="">
-      Actions
-      <button onClick={addItem}>Add Item</button>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
+import DocumentPdf from "./DocumentPdf";
+import { pdf } from "@react-pdf/renderer";
+import { saveAs } from "file-saver";
+import PDFDownload from "../assets/pdf.png";
+const Actions = () => {
+     return (
+          <div className="w-100 flex justify-center gap-5 h-8">
+               <img
+                    src={PDFDownload}
+                    alt="pdf download"
+										className="cursor-pointer"
+                    onClick={async () => {
+                         const doc = <DocumentPdf />;
+                         const asPdf = pdf();
+                         asPdf.updateContainer(doc);
+                         const blob = await asPdf.toBlob();
+                         saveAs(blob, "document.pdf");
+                    }}
+               />
+          </div>
+     );
 };
 
-export default React.memo(Actions);
+export default Actions;
