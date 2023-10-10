@@ -1,10 +1,10 @@
 export const PERSONAL_INFO = {
   name: "Nguyen Thai Ha",
-  nickname: "thaihaf",
+  nickname: "",
   position: "Front-end Developer",
   phone: "+84 819.889.962 (VN)",
   email: "thaiha2268@gmail.com",
-  link: "https://www.linkedin.com/in/thaihaf/",
+  link: "https://github.com/thaihaf",
 };
 
 export const SUMMARY = [

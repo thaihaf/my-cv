@@ -1,20 +1,133 @@
 {
-  "personal_info": {
-    "name": "Nguyen Thai Ha",
-    "nickname": "thaihaf",
-    "position": "Front-end Developer",
-    "phone": "+84 819.889.962 (VN)",
-    "email": "thaiha2268@gmail.com",
-    "link": "https://www.linkedin.com/in/thaihaf/"
-  },
-  "summary": {
-    "text1": "I' am a Front-end developer with 1.5 years of experience in ReactJs technologies ( which includes 3 months of training in React Native), with good knowledge of Object-Oriented Analysis and Design, Database Design, and Design patterns.",
-    "text2": "Leaning new languages and technologies is what I am passionate about. I am considered a team-player because I like to help other and tend to work well within the group I can also do some mentoring tasks and do code review for other team members."
-  },
-  "technical_skills": {
-    "title" : "Technical skills",
-    "data" : {
-      
-    }
-  }
+     "PERSONAL_INFO": {
+          "title": "personal info",
+          "data": {
+               "name": "Nguyen Thai Ha",
+               "nickname": "",
+               "position": "Front-end Developer",
+               "phone": "+84 819.889.962 (VN)",
+               "email": "thaiha2268@gmail.com",
+               "link": "https://github.com/thaihaf"
+          }
+     },
+     "SUMMARY": {
+          "title": "summary",
+          "data": [
+               "I'm a Front-End Web Developer with 1 years of experience in ReactJs technologies (which includes 3 months of training in React Native), with good knowledge of Object-Oriented Analysis and Design, Database Design, and Design patterns.",
+               "Leaning new languages and technologies is what I am passionate about. I am considered a team-player because I like to help other and tend to work well within the group I can also do some mentoring tasks and do code review for other team members."
+          ]
+     },
+     "TECHNICAL_SKILLS": {
+          "title": "technical skills",
+          "data": [
+               {
+                    "title": "Programming Languages",
+                    "data": ["C#.NET, Java, JavaScript", "HTML5, CSS3"]
+               },
+               {
+                    "title": "Framework/Platforms",
+                    "data": [
+                         "ReactJS, React Native, NodeJS",
+                         "Redux, React Query, Ant Design",
+                         "Docker, Postman, Figma, ES6",
+                         "Entity Framework",
+                         "JQuery, Bootstrap, Tailwind, Typescipt"
+                    ]
+               },
+               {
+                    "title": "Foreign Languages",
+                    "data": [
+                         {
+                              "id": "english",
+                              "title": "English",
+                              "details": ["TOEIC: 670/990", "IELTS: 6.5"]
+                         }
+                    ]
+               },
+               {
+                    "title": "Database Management Systems",
+                    "data": ["MS SQL Server, MongoDB"]
+               },
+               {
+                    "title": "Version Control",
+                    "data": ["Git"]
+               },
+
+               {
+                    "title": "Soft Skills",
+                    "data": [
+                         "Time management",
+                         "Business communication",
+                         "Teamwork"
+                    ]
+               },
+               {
+                    "title": "Others",
+                    "data": [
+                         "Good understanding of OOP methodologies, SOLID principles, design patterns",
+                         "Experience with Agile and Scrum development process",
+                         "Intermediate Photoshop skill. Can do simple design: logo, banner, poster,..."
+                    ]
+               }
+          ]
+     },
+     "EDUCATION": {
+          "title": "Education",
+          "data": [
+               {
+                    "name": "FPT University Ha Noi (Vietnam)",
+                    "fromDate": "09/2016",
+                    "toDate": "12/2022",
+                    "details": [
+                         "Specialization: Software Engineering.",
+                         "Degree grade: Good - GPA 88%"
+                    ]
+               }
+          ]
+     },
+     "PROFESSIONAL_EXPERIENCE": {
+          "title": "Professional Experience",
+          "data": [
+               {
+                    "id": "monstarlab",
+                    "name": "Monstarlab",
+                    "fromDate": "02/2015",
+                    "toDate": "now",
+                    "position": "Fullstack",
+                    "project": {
+                         "name": "FPT University",
+                         "desc": "A free mobie app delivering Lancaster",
+                         "size": 10,
+                         "responsibility": ["Design", "Development"]
+                    }
+               },
+               {
+                    "id": "fpt",
+                    "name": "FPT University",
+                    "fromDate": "02/2015",
+                    "toDate": "now",
+                    "position": "Fullstack",
+                    "project": {
+                         "name": "FPT University",
+                         "desc": "A free mobie app delivering Lancaster",
+                         "size": 10,
+                         "responsibility": ["Design", "Development"]
+                    }
+               }
+          ],
+          "project_title": {
+               "name": "Name",
+               "position": "Position",
+               "desc": "Project description",
+               "size": "Team size",
+               "responsibility": "Responsibilities"
+          }
+     },
+     "PASTIMES_AND_ACTIVITIES": {
+          "title": "pastimes and activities",
+          "data": [
+               "I am keen on reading books, IT blogs, Medium and Quora in my free time",
+               "In my free time, I also work in some pet projects. They can found at my online CV and my Github profile"
+          ]
+     }
 }
