@@ -1,8 +1,9 @@
-import { EDUCATION } from "../data";
 import Title from "../atoms/Title";
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import ListStyleType from "../atoms/ListStyleType";
 import { ListStyleTypeEnum } from "../constants/constants";
+import { useTranslation } from "react-i18next";
+import { EDUCATION_TYPE } from "@/constants/type";
 
 interface EducationProps {
      isPDF?: boolean;
@@ -21,15 +22,19 @@ const styles = StyleSheet.create({
      },
 });
 export default function Education({ isPDF }: EducationProps) {
+     const { t } = useTranslation("translation", {
+          keyPrefix: "EDUCATION",
+     });
+     const data: EDUCATION_TYPE[] = t("data", { returnObjects: true });
      if (isPDF) {
           return (
                <>
-                    <Title title={EDUCATION.title} isPDF={true} />
+                    <Title title={t("title")} isPDF={true} />
 
                     <View wrap={false}>
-                         {EDUCATION.data.map((item) => {
+                         {data.map((item) => {
                               return (
-                                   <View key={item.id}>
+                                   <View key={item.name}>
                                         <View style={styles.title}>
                                              <Text style={styles.name}>
                                                   {item.name}
@@ -44,6 +49,7 @@ export default function Education({ isPDF }: EducationProps) {
                                                             ListStyleTypeEnum.DOT
                                                        }
                                                        content={item}
+                                                       isPDF
                                                   />
                                              ))}
                                         </View>
@@ -56,12 +62,12 @@ export default function Education({ isPDF }: EducationProps) {
      }
      return (
           <>
-               <Title title={EDUCATION.title} />
+               <Title title={t("title")} />
 
                <div className="container">
-                    {EDUCATION.data.map((item) => {
+                    {data.map((item) => {
                          return (
-                              <div className="mb-8" key={item.id}>
+                              <div className="mb-8" key={item.name}>
                                    <div className="flex align-center justify-between">
                                         <div className="name font-bold">
                                              {item.name}

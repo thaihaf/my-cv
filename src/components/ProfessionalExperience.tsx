@@ -1,8 +1,9 @@
-import { PROFESSIONAL_EXPERIENCE } from "../data";
 import Title from "../atoms/Title";
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import ListStyleType from "../atoms/ListStyleType";
 import { ListStyleTypeEnum } from "../constants/constants";
+import { useTranslation } from "react-i18next";
+import { PROFESSIONAL_EXPERIENCE_TYPE } from "@/constants/type";
 
 interface ProfessionalExperienceProps {
      isPDF?: boolean;
@@ -38,13 +39,20 @@ const styles = StyleSheet.create({
 export default function ProfessionalExperience({
      isPDF,
 }: ProfessionalExperienceProps) {
+     const { t } = useTranslation("translation", {
+          keyPrefix: "PROFESSIONAL_EXPERIENCE",
+     });
+     const data: PROFESSIONAL_EXPERIENCE_TYPE[] = t("data", {
+          returnObjects: true,
+     });
+
      if (isPDF) {
           return (
                <>
-                    <Title title={PROFESSIONAL_EXPERIENCE.title} isPDF={true} />
+                    <Title title={t("title")} isPDF={true} />
 
                     <View>
-                         {PROFESSIONAL_EXPERIENCE.data.map((item) => {
+                         {data.map((item) => {
                               return (
                                    <View
                                         style={{ marginBottom: "32px" }}
@@ -57,16 +65,12 @@ export default function ProfessionalExperience({
                                              <Text>{`${item.fromDate} - ${item.toDate}`}</Text>
                                         </View>
 
-                                        <Text
-                                             style={{ fontWeight: 600 }}
-                                        >{`Position:  ${item.position}`}</Text>
-
-                                        <View style={styles.project}>
-                                             <Text style={{ fontWeight: 600 }}>
-                                                  Project:
-                                             </Text>
-                                             <Text>{item.project.name}</Text>
-                                        </View>
+                                        <Text style={{ fontWeight: 600 }}>{`${t(
+                                             "project_title.position"
+                                        )}:  ${item.position}`}</Text>
+                                        <Text style={{ fontWeight: 600 }}>{`${t(
+                                             "project_title.name"
+                                        )}:  ${item.project.name}`}</Text>
 
                                         <View style={{ paddingLeft: "56px" }}>
                                              <View style={styles.description}>
@@ -74,10 +78,11 @@ export default function ProfessionalExperience({
                                                        type={
                                                             ListStyleTypeEnum.DOT
                                                        }
-                                                       content={
-                                                            "Project Description: "
-                                                       }
+                                                       content={`${t(
+                                                            "project_title.desc"
+                                                       )}: `}
                                                        isBold
+                                                       isPDF
                                                   />
                                                   <Text>
                                                        {item.project.desc}
@@ -88,8 +93,11 @@ export default function ProfessionalExperience({
                                                        type={
                                                             ListStyleTypeEnum.DOT
                                                        }
-                                                       content={"Team size: "}
+                                                       content={`${t(
+                                                            "project_title.size"
+                                                       )}: `}
                                                        isBold
+                                                       isPDF
                                                   />
                                                   <Text>
                                                        {item.project.size}
@@ -100,10 +108,11 @@ export default function ProfessionalExperience({
                                                        type={
                                                             ListStyleTypeEnum.DOT
                                                        }
-                                                       content={
-                                                            "Responsibilities: "
-                                                       }
+                                                       content={`${t(
+                                                            "project_title.responsibility"
+                                                       )}`}
                                                        isBold
+                                                       isPDF
                                                   />
 
                                                   <View
@@ -130,10 +139,10 @@ export default function ProfessionalExperience({
      }
      return (
           <>
-               <Title title={PROFESSIONAL_EXPERIENCE.title} />
+               <Title title={t("title")} />
 
                <div className="container">
-                    {PROFESSIONAL_EXPERIENCE.data.map((item) => {
+                    {data.map((item) => {
                          return (
                               <div className="mb-8" key={item.id}>
                                    <div className="flex align-center justify-between">
@@ -143,31 +152,33 @@ export default function ProfessionalExperience({
                                         <div className="fromTo">{`${item.fromDate} - ${item.toDate}`}</div>
                                    </div>
 
-                                   <div className="font-bold">{`Position: ${item.position}`}</div>
-
-                                   <div>
-                                        <span className="font-bold">
-                                             Project:{" "}
-                                        </span>
-                                        <span>{item.project.name}</span>
+                                   <div className="font-bold">
+                                        {`${t("project_title.position")}: ${
+                                             item.position
+                                        }`}
+                                   </div>
+                                   <div className="font-bold">
+                                        {`${t("project_title.name")}: ${
+                                             item.project.name
+                                        }`}
                                    </div>
 
                                    <ul className="list-disc pl-14">
-                                        <li className="">
-                                             <span className="font-bold">
-                                                  Project Description:{" "}
-                                             </span>
-                                             <span>{item.project.desc}</span>
+                                        <li className="font-bold">
+                                             {`${t("project_title.desc")}: ${
+                                                  item.project.desc
+                                             }`}
                                         </li>
-                                        <li className="">
-                                             <span className="font-bold">
-                                                  Team size:{" "}
-                                             </span>
-                                             <span>{item.project.size}</span>
+                                        <li className="font-bold">
+                                             {`${t("project_title.size")}: ${
+                                                  item.project.size
+                                             }`}
                                         </li>
-                                        <li className="">
+                                        <li>
                                              <p className="font-bold">
-                                                  Responsibilities:{" "}
+                                                  {`${t(
+                                                       "project_title.responsibility"
+                                                  )}: `}
                                              </p>
 
                                              <ul className="pl-6">

@@ -1,8 +1,8 @@
 import Title from "../atoms/Title";
-import { PASTIMES_AND_ACTIVITIES } from "../data";
 import { View } from "@react-pdf/renderer";
 import ListStyleType from "../atoms/ListStyleType";
 import { ListStyleTypeEnum } from "../constants/constants";
+import { useTranslation } from "react-i18next";
 
 interface PastimesAndActivitiesProps {
      isPDF?: boolean;
@@ -10,18 +10,23 @@ interface PastimesAndActivitiesProps {
 export default function PastimesAndActivities({
      isPDF,
 }: PastimesAndActivitiesProps) {
+     const { t } = useTranslation("translation", {
+          keyPrefix: "PASTIMES_AND_ACTIVITIES",
+     });
+     const data: string[] = t("data", { returnObjects: true });
      if (isPDF) {
           return (
                <>
-                    <Title title={PASTIMES_AND_ACTIVITIES.title} isPDF={true} />
+                    <Title title={t("title")} isPDF={true} />
 
                     <View wrap={false}>
                          <View style={{ paddingLeft: "28px" }}>
-                              {PASTIMES_AND_ACTIVITIES.data.map((item) => (
+                              {data.map((item) => (
                                    <ListStyleType
                                         type={ListStyleTypeEnum.DOT}
                                         content={item}
                                         key={item}
+                                        isPDF
                                    />
                               ))}
                          </View>
@@ -31,11 +36,11 @@ export default function PastimesAndActivities({
      }
      return (
           <>
-               <Title title={PASTIMES_AND_ACTIVITIES.title} />
+               <Title title={t("title")} />
 
                <div className="container">
                     <ul className="list-disc pl-14">
-                         {PASTIMES_AND_ACTIVITIES.data.map((item) => (
+                         {data.map((item) => (
                               <li key={item}>{item}</li>
                          ))}
                     </ul>

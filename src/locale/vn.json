@@ -1,0 +1,133 @@
+{
+     "PERSONAL_INFO": {
+          "title": "personal info",
+          "data": {
+               "name": "Nguyen Thai Ha",
+               "nickname": "",
+               "position": "Front-end Developer",
+               "phone": "+84 819.889.962 (VN)",
+               "email": "thaiha2268@gmail.com",
+               "link": "https://github.com/thaihaf"
+          }
+     },
+     "SUMMARY": {
+          "title": "Giới thiệu",
+          "data": [
+               "Tôi là nhà phát triển Front-end với 1,5 năm kinh nghiệm về công nghệ ReactJs (bao gồm 3 tháng đào tạo về React Native), có kiến thức tốt về Phân tích và thiết kế hướng đối tượng, Thiết kế cơ sở dữ liệu và các mẫu thiết kế.",
+               "Nghiên cứu các ngôn ngữ và công nghệ mới là điều tôi đam mê. Tôi được coi là người có tinh thần đồng đội vì tôi thích giúp đỡ người khác và có xu hướng làm việc tốt trong nhóm. Tôi cũng có thể thực hiện một số nhiệm vụ cố vấn và đánh giá mã cho các thành viên khác trong nhóm."
+          ]
+     },
+     "TECHNICAL_SKILLS": {
+          "title": "Công nghệ",
+          "data": [
+               {
+                    "title": "Ngôn ngữ lập trình",
+                    "data": ["C#.NET, Java, JavaScript", "HTML5, CSS3"]
+               },
+               {
+                    "title": "Thư viện",
+                    "data": [
+                         "React, Angular, NodeJS",
+                         "Webpack, Babel, ES6",
+                         "ASP.NET MVC Web API",
+                         "Entity Framework",
+                         "JQuery, Bootstrap, Tailwind"
+                    ]
+               },
+               {
+                    "title": "Ngôn ngữ",
+                    "data": [
+                         {
+                              "id": "english",
+                              "title": "Tiếng anh",
+                              "details": ["TOEIC: 670/990", "IELTS: 6.5"]
+                         }
+                    ]
+               },
+               {
+                    "title": "Quản lý cơ sở dữ liệu",
+                    "data": ["MS SQL Server, MySQL"]
+               },
+               {
+                    "title": "Quản lý phiên bản",
+                    "data": ["Git, TFS", "SVN"]
+               },
+
+               {
+                    "title": "Kỹ năng mềm",
+                    "data": [
+                         "Quản lý thời gian",
+                         "Giao tiếp kinh doanh",
+                         "Làm việc nhóm"
+                    ]
+               },
+               {
+                    "title": "Khác",
+                    "data": [
+                         "Hiểu biết tốt về các phương pháp OOP, nguyên tắc SOLID, mẫu thiết kế",
+                         "Có kinh nghiệm với quy trình phát triển Agile và Scrum",
+                         "Kỹ năng Photoshop trung cấp. Có thể thiết kế đơn giản: logo, banner, poster,..."
+                    ]
+               }
+          ]
+     },
+     "EDUCATION": {
+          "title": "Học vấn",
+          "data": [
+               {
+                    "name": "FPT University Ha Noi (Vietnam)",
+                    "fromDate": "09/2016",
+                    "toDate": "12/2022",
+                    "details": [
+                         "Chuyên ngành: Kỹ thuật phần mềm",
+                         "Tốt nghiệp loại: Khá - GPA 88%"
+                    ]
+               }
+          ]
+     },
+     "PROFESSIONAL_EXPERIENCE": {
+          "title": "Kinh nghiệm chuyên môn",
+          "data": [
+               {
+                    "id": "monstarlab",
+                    "name": "Monstarlab",
+                    "fromDate": "02/2015",
+                    "toDate": "Hiện tại",
+                    "position": "Front-end",
+                    "project": {
+                         "name": "FPT University",
+                         "desc": "A free mobie app delivering Lancaster",
+                         "size": 20,
+                         "responsibility": ["Design", "Development"]
+                    }
+               },
+               {
+                    "id": "fpt",
+                    "name": "FPT University",
+                    "fromDate": "02/2015",
+                    "toDate": "now",
+                    "position": "Fullstack",
+                    "project": {
+                         "name": "FPT University",
+                         "desc": "A free mobie app delivering Lancaster",
+                         "size": 10,
+                         "responsibility": ["Design", "Development"]
+                    }
+               }
+          ],
+          "project_title": {
+               "name": "Tên dự án",
+               "position": "Vị trí",
+               "desc": "Mô tả",
+               "size": "Số lượng thành viên",
+               "responsibility": "Trách nhiệm"
+          }
+     },
+     "PASTIMES_AND_ACTIVITIES": {
+          "title": "Hoạt động khác",
+          "data": [
+               "Tôi thích đọc sách, blog CNTT, Medium và Quora khi rảnh rỗi",
+               "Trong thời gian rảnh rỗi, tôi cũng làm việc trong một số dự án thú cưng. Bạn có thể tìm thấy chúng trong CV trực tuyến và hồ sơ Github của tôi"
+          ]
+     }
+}

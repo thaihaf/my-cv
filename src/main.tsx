@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { Font } from "@react-pdf/renderer";
+import "./i18n.config.ts";
 
 Font.register({
      family: "Open Sans",
